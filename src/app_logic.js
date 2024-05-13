@@ -65,4 +65,16 @@ function caesarCipher(string, factor) {
 
     return convertedString
 }
-export {capitalize, reverseString, calculator, caesarCipher}
+
+function analyzeArray(array) {
+    let total = array.reduce((accumulator, currentValue) =>  accumulator + currentValue, 0)
+    
+    let object = {
+        average: total/ array.length,
+        min: Math.min.apply(null, array),
+        max:Math.max.apply(null, array),
+        length: array.length
+    }
+    return object
+}
+export {capitalize, reverseString, calculator, caesarCipher, analyzeArray}

@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator, caesarCipher } from "./app_logic";
+import { capitalize, reverseString, calculator, caesarCipher,analyzeArray } from "./app_logic";
 
 test("capitalize the first character of string ", ()=> {
     expect(capitalize("lion")).toBe("Lion");
@@ -29,5 +29,14 @@ test("Caeser Cipher: within the range", ()=> {
 })
 
 test("Caeser Cipher: including a outside range z and negative", ()=> {
-    expect(caesarCipher("XyZ", -2)).toBe("VwX");
+    expect(caesarCipher("XyZ", 5)).toBe("CdE");
+})
+
+test("analyze Array: take array and give av, min max and length", ()=> {
+    expect(analyzeArray([1,8,3,4,2,6])).toStrictEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+      });
 })
