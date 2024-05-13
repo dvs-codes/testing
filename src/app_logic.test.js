@@ -25,9 +25,9 @@ test("calculator: multiply ", ()=> {
 })
 
 test("Caeser Cipher: within the range", ()=> {
-    expect(caesarCipher("ABC", 1)).toBe("BCD");
+    expect(caesarCipher("ABC", 26)).toBe("ABC");
 })
 
-test("Caeser Cipher: including a outside range 'z'", ()=> {
-    expect(caesarCipher("XyZ", 3)).toBe("AbC");
+test("Caeser Cipher: including a outside range z and negative", ()=> {
+    expect(caesarCipher("XyZ", -2)).toBe("VwX");
 })
